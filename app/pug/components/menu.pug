@@ -1,0 +1,6 @@
+mixin menu
+  nav.menu
+    ul.menu__list
+      each value, index in {}
+        li.menu__list-item 
+          a.menu__list-link(href="#" + value)= index

@@ -1,0 +1,119 @@
+.content
+  &__title
+    text-transform: uppercase
+    font-size: 56px
+    line-height: 100%
+    @extend %forum
+    max-width: 740px
+    text-align: center
+    margin: 0 auto 30px
+    letter-spacing: 3px
+    span
+      display: none
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 20px
+    align-items: center
+    align-content: center
+    margin-bottom: 45px
+    margin-top: 0
+    padding: 0
+    &-wrapper
+      padding: 0
+  &__item
+    height: 78px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    border-radius: 20px
+    background: linear-gradient(107.48deg, rgba(255, 255, 255, 0.32) -7.11%, rgba(255, 255, 255, 0) 126.78%)
+    backdrop-filter: blur(41px)
+    &-text
+      max-width: 230px
+  &__link
+    @extend %sans-600
+    +flex-center()
+    font-size: 18px
+    line-height: 100%
+    width: 303px
+    height: 64px
+    margin: 0 auto
+    position: relative
+    transition: all .3s
+    margin-bottom: 40px
+    &:hover
+      &::after
+        width: 335px
+        border-radius: 96px
+        height: 88px
+        transition: all .4s
+    span
+      position: relative
+      z-index: 5
+    &::after
+      content: ''
+      position: absolute
+      opacity: 1
+      z-index: 2
+      width: 303px
+      height: 64px
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      border-radius: 90px
+      transition: .5s
+      box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2)
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -58.93%, rgba(0, 0, 0, 0) 117.86%), linear-gradient(304.13deg, #B7A077 7.17%, #FFE7BC 103.66%)
+    &::before
+      content: ''
+      position: absolute
+      z-index: 1
+      width: 335px
+      height: 88px
+      border-radius: 96px
+      background: rgba(221, 221, 221, 0.21)
+      box-shadow: 1px 11px 21px rgba(160, 160, 160, 0.14)
+      backdrop-filter: blur(32px)
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      transition: .5s
+  &__play
+    width: 56px
+    height: 56px
+    margin: 0 auto
+    position: relative
+    cursor: pointer
+    +flex-center()
+    &:hover
+      &::after
+        width: 80px
+        height: 80px
+        transition: .4s
+    &::after
+      content: ''
+      width: 56px
+      height: 56px
+      position: absolute
+      z-index: 3
+      border-radius: 50%
+      background-color: #fff
+      transition: .4s
+      box-shadow: 3px 9px 8px rgba(0, 0, 0, 0.07), 2px 4px 6px rgba(0, 0, 0, 0.08)
+    img
+      position: relative
+      z-index: 4
+    &::before
+      content: ''
+      position: absolute
+      width: 80px
+      height: 80px
+      border-radius: 50%
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      background: linear-gradient(107.48deg, rgba(255, 255, 255, 0.13) -7.11%, rgba(255, 255, 255, 0) 126.78%), linear-gradient(339.58deg, rgba(42, 59, 79, 0.68) -10.82%, rgba(136, 149, 163, 0) 60.22%)
+      backdrop-filter: blur(24px)
+      z-index: 1

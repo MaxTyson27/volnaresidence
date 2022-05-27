@@ -1,0 +1,91 @@
+@media (max-width: 1199px)
+  .container
+    max-width: 768px
+    padding: 0 10px
+  .content
+    .container
+      max-width: 100%
+      padding: 0
+    &__list
+      width: 1200px
+      padding: 0 10px
+      &-wrapper
+        overflow-x: scroll
+        &::-webkit-scrollbar
+          width: 0
+          opacity: 0
+
+@media(max-width: 767px)
+
+  .container
+    max-width: 375px
+    padding: 0 20px
+  .header
+    &__inner
+      padding-top: 55px
+      padding-bottom: 10px
+    &__adress-text
+      font-size: 14px
+      max-width: 72px
+      line-height: 100%
+  .content
+    &__list
+      padding: 0 20px
+      width: 768px
+    &__title
+      max-width: 375px
+      font-size: 37px
+      line-height: 100%
+      margin: 0 auto 25px
+      span
+        display: inline
+    &__item
+      height: 100px
+      &-text
+        max-width: 100%
+        padding: 0 12px
+    &__buttons
+      display: flex
+      flex-direction: column
+    &__link
+      order: 2
+      margin-bottom: 0
+    &__play
+      margin-bottom: 180px
+  .modal
+    max-width: 100%
+    top: unset
+    transform: translate(-50%, 0)
+    bottom: 0
+
+@media (max-width: 500px)
+  .modal
+    padding-top: 100px
+    padding-bottom: 70px
+    &__inner
+      max-width: 335px
+      margin: 0 auto
+    &__form
+      &-input
+        width: 100%
+      &-btn
+        width: 100%
+  .success
+    padding: 100px 0px
+    max-width: 100%
+
+@media(max-width: 470px)
+  .wrapper
+    +bgp('../images/bg-sm.jpg', cover, bottom, center)
+
+//@media(max-width: 414px) and (max-height: 736px)
+//  .content
+//    &__play
+//      margin-bottom: 130px
+
+@media(max-width: 375px) and (max-height: 677px)
+  .content
+    &__list
+      margin-bottom: 35px
+    &__play
+      margin-bottom: 100px

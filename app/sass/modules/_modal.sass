@@ -1,0 +1,83 @@
+.modal
+  max-width: 590px
+  width: 100%
+  padding: 75px 0
+  background-color: #fff
+  position: fixed
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  z-index: 10
+  visibility: hidden
+  opacity: 0
+  transition: .3s
+  &--close
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    background: #000000
+    opacity: 0
+    transition: .3s
+    visibility: hidden
+    cursor: pointer
+    &.bg--active
+      visibility: visible
+      opacity: 0.4
+      z-index: 6
+  &.modal--active
+    visibility: visible
+    opacity: 1
+  &__title
+    color: #202020
+    font-size: 32px
+    line-height: 120%
+    font-weight: 400
+    margin-bottom: 25px
+    text-align: center
+  &__close
+    background-color: transparent
+    @extend %close-btn
+  &__form
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    &-input
+      display: block
+      width: 395px
+      height: 56px
+      padding: 0 24px
+      border: 1px solid #DDDCDB
+      border-radius: 64px
+      margin-bottom: 24px
+      &:nth-child(2)
+        border: 1px solid #B99D6A
+      &::placeholder
+        color: #202020
+        @extend %sans-400
+    &-btn
+      width: 395px
+      height: 56px
+      border-radius: 48px
+      background: linear-gradient(270deg, #A98443 -72.08%, #D7B26E 142.92%), #B99D6A
+      border: none
+      padding: 0
+      +flex-center()
+      @extend %sans-400
+      font-size: 18px
+      line-height: 130%
+      letter-spacing: 1px
+      color: #fff
+      column-gap: 6px
+      margin-bottom: 56px
+  &__policy
+    max-width: 320px
+    color: #6A6A6A
+    text-align: center
+    margin: 0 auto
+    font-weight: 400
+    letter-spacing: 0.5px
+    a
+      text-decoration: underline

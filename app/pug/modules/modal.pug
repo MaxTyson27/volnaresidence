@@ -1,0 +1,17 @@
+.modal--close
+.modal
+    .modal__inner
+        h2.modal__title Заполните форму
+        button.modal__close
+            img(src='images/close.svg')
+        form.modal__form(action='#' method='POST')
+            input.modal__form-input.input-name(type='text' name='name' required placeholder="Ваше имя")
+            input.modal__form-input(type='tel' name='tel' required placeholder="+7(___) ___-__-__")
+            button.modal__form-btn Скачать презентацию
+            p.modal__policy Нажимая на&nbsp;кнопку отправить я&nbsp;соглашаюсь <a href='https://nedvex.ru/privacy' target="_blank">с&nbsp;политикой конфиденциальности</a>
+.success
+    .success__inner
+        button.success__close
+            img(src='images/close.svg')
+        img.success__letter(src='images/letter.svg')
+        h2.success__title Ваша заявка успешно отправлена
